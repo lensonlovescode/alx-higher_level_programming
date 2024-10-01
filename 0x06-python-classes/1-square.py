@@ -15,4 +15,4 @@ class Square:
         initialize the class
         size - size of the square
         """
-        self.__width = size
+        self.__size = size
