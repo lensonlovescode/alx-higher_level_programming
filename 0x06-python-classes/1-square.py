@@ -11,4 +11,8 @@ class Square:
     This is an empty class Square that defines a square
     """
     def __init__(self, size):
-        self.__width = size
+    """
+    initialize the class
+    size - size of the square
+    """
+    self.__width = size
