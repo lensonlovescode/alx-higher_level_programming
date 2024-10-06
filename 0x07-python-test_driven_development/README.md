@@ -1,0 +1,1 @@
+This directory contains project tasks from the concept of tests driven development in python covering doctests and unit tests.
