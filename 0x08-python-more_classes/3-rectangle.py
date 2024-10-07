@@ -16,8 +16,8 @@ class Rectangle:
         width is the width of the new rectangle.
         height is the height of the new rectangle.
         """
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -73,7 +73,7 @@ class Rectangle:
 
     def __str__(self):
         """
-        Returns a string rep of the rectangle using the #
+        Returns a string rep of the rectangle using  #
         """
         my_list = []
         for j in range(self.__height):
