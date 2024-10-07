@@ -75,6 +75,8 @@ class Rectangle:
         """
         Returns a string rep of the rectangle using  #
         """
+        if self.__height == 0 or self.__width == 0:
+            return ("")
         my_list = []
         for j in range(self.__height):
             for i in range(self.__width):
