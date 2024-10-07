@@ -11,6 +11,11 @@ class Rectangle:
     width is the width
     """
     def __init__(self, width=0, height=0):
+        """
+        Initialize a new Rectangle.
+        width is the width of the new rectangle.
+        height is the height of the new rectangle.
+        """
         self.__width = width
         self.__height = height
 
