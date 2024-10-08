@@ -26,7 +26,34 @@ In Python, variables work with pass by object reference (pass by assignment). Th
 4. **Two Variables with the Same Value**:
    - python only automatically reuses memory for some small immutable objects like integers, chars & strings.
    - For tuples (and other complex objects), Python doesn't always perform this optimization.
+
+   Mutable objects (lists, dict, sets)
+
+    -----Empty and non-empty instances are different objects, resulting in is returning False. ------
+
+   >>> a = {} // Dictionary (Empty) - diferrent object
+   >>> b = {}
+   >>> a is b
+   False
+   >>> b = [] // list (Empty) - diferrent object
+   >>> a = []
+   >>> a is b
+   False
+   >>> a = [4, 5] // list (None-empty) - diferrent objects
+   >>> b = [4, 5]
+   >>> a is b
+   False
+   >>> a = {'a': 1} // Dictionary (None-empty) - diferrent objects
+   >>> b = {'a': 1}
+   >>> a is b
+   False
+
+   Immutable objects (int, char, str, tuples)
    
+   ----- common types like strings, ints, and chars are the same object for optimization
+   ----- Floats and none empty tuples are diferrent objects
+   ----- An empty tuple is the same object
+
    >>> a = 6 // integers - same object
    >>> b = 6
    >>> a is b
@@ -39,19 +66,18 @@ In Python, variables work with pass by object reference (pass by assignment). Th
    >>> b = "me"
    >>> a is b
    True
-   >>> a = (4, 5) // tuples - diferrent objects
-   >>> b = (4, 5)
-   >>> a is b
-   False
-   >>> a = [4, 5] // list - diferrent objects
-   >>> b = [4, 5]
-   >>> a is b
-   False
    >>> a = 5.5 // float - diferrent object
    >>> b = 5.5
    >>> a is b
    False
-   >>>
+   >>> a = () // Tuple (Empty) - same object
+   >>> b = ()
+   >>> a is b
+   True
+   >>> a = (4, 5) // Tuple (None-empty) - diferrent objects
+   >>> b = (4, 5)
+   >>> a is b
+   False
 
 5. **Behavior as Objects**:
    - Everything is an object with identity, type, and value.
