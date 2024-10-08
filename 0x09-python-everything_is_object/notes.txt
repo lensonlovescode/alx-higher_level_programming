@@ -2,11 +2,12 @@
 In Python, variables work with pass by object reference (pass by assignment). This behavior simplifies into two categories:
 
 1. Mutable objects (like lists, dictionaries, sets):
-	When you pass a mutable object to a function, any changes
-	made to the object inside the function will affect the original object.
+	- When you pass a mutable object to a function, any changes
+	  made to the object inside the function will affect the original object.
+	- Reassigning tho, does not change the original object, only manipulation, like appending
 2. Immutable objects (like integers, strings, tuples):
-	When you pass an immutable object, any attempt to modify
-	it within the function creates a new object instead of altering the original.
+	- When you pass an immutable object, any attempt to modify
+	  it within the function creates a new object instead of altering the original.
 
 # Python: Mutable vs Immutable Objects
 
@@ -15,7 +16,7 @@ In Python, variables work with pass by object reference (pass by assignment). Th
    - Mutable: Can be changed in place (e.g., list, dict, set).
 
 2. **Aliasing**:
-   - Immutable: Safe, even if two variables reference the same object.
+   - Immutable: Two variables reference the same object, changes do not apply since they're immutable
    - Mutable: Both variables point to the same object, changes affect both.
 
 3. **Cloning**:
@@ -23,8 +24,34 @@ In Python, variables work with pass by object reference (pass by assignment). Th
    - Deep Copy: Creates an independent copy of the entire object structure.
 
 4. **Two Variables with the Same Value**:
-   - Immutable: May reference the same object, no problem because they can't be changed.
-   - Mutable: Two distinct objects even if they have the same content.
+   - python only automatically reuses memory for some small immutable objects like integers, chars & strings.
+   - For tuples (and other complex objects), Python doesn't always perform this optimization.
+   
+   >>> a = 6 // integers - same object
+   >>> b = 6
+   >>> a is b
+   True
+   >>> a = 'x' // character - same object
+   >>> b = 'x'
+   >>> a is b
+   True
+   >>> a = "me" // string - same object
+   >>> b = "me"
+   >>> a is b
+   True
+   >>> a = (4, 5) // tuples - diferrent objects
+   >>> b = (4, 5)
+   >>> a is b
+   False
+   >>> a = [4, 5] // list - diferrent objects
+   >>> b = [4, 5]
+   >>> a is b
+   False
+   >>> a = 5.5 // float - diferrent object
+   >>> b = 5.5
+   >>> a is b
+   False
+   >>>
 
 5. **Behavior as Objects**:
    - Everything is an object with identity, type, and value.
