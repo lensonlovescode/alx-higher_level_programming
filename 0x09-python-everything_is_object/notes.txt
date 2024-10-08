@@ -1,0 +1,33 @@
+# Python pass by:
+In Python, variables work with pass by object reference (pass by assignment). This behavior simplifies into two categories:
+
+1. Mutable objects (like lists, dictionaries, sets):
+	When you pass a mutable object to a function, any changes
+	made to the object inside the function will affect the original object.
+2. Immutable objects (like integers, strings, tuples):
+	When you pass an immutable object, any attempt to modify
+	it within the function creates a new object instead of altering the original.
+
+# Python: Mutable vs Immutable Objects
+
+1. **Object Creation**:
+   - Immutable: Cannot be changed after creation (e.g., int, str, tuple).
+   - Mutable: Can be changed in place (e.g., list, dict, set).
+
+2. **Aliasing**:
+   - Immutable: Safe, even if two variables reference the same object.
+   - Mutable: Both variables point to the same object, changes affect both.
+
+3. **Cloning**:
+   - Shallow Copy: Creates a new object but not for nested objects.
+   - Deep Copy: Creates an independent copy of the entire object structure.
+
+4. **Two Variables with the Same Value**:
+   - Immutable: May reference the same object, no problem because they can't be changed.
+   - Mutable: Two distinct objects even if they have the same content.
+
+5. **Behavior as Objects**:
+   - Everything is an object with identity, type, and value.
+   - Immutable: Fixed identity and value.
+   - Mutable: Fixed identity, changeable value.
+
