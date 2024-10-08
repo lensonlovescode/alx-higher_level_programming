@@ -19,8 +19,8 @@ class TestMaxInteger(unittest.TestCase):
         - A list containing negative integers.
         - A list with mixed positive and negative integers.
         - A list with a single integer.
-        - An empty list (should raise ValueError).
-        - A list containing non-integer types (should raise TypeError).
+        - An empty list.
+        - A list containing non-integer types.
     """
     def test_optimal(self):
         """
@@ -53,8 +53,28 @@ class TestMaxInteger(unittest.TestCase):
         Test case to ensure a ValueError is raised for an empty list.
         """
         self.assertEqual(max_integer([]), None)
-    def test_notlist(self):
+    def test_none(self):
         """
-        Test case to ensure a TypeError is raised when the input is not a list.
+        Test for when none object is passed
         """
-        self.assertRaises(TypeError, max_integer, "my string not a list")
+        self.assertRaises(TypeError, max_integer, None)
+    def test_matrix(self):
+        """
+        Test for a list of lists
+        """
+        self.assertRaises(TypeError, max_integer, [[1, 2, 3], [1], 4])
+    def test_char(self):
+        """
+        Test for a list of non integers
+        """
+        self.assertEqual(max_integer(['g', 'g', 'z']), 'z')
+    def test_float(self):
+        """
+        Test case for a list of floats
+        """
+        self.assertEqual(max_integer([4.4, 5.5, 7.3]), 7.3)
+    def test_string(self):
+        """
+        Test case for a list of strings
+        """
+        self.assertEqual(max_integer(["Havertx", "Tyrone", "Udogi", "Fufu"]), "Udogi")

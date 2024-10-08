@@ -1,3 +1,15 @@
+===============================
+0-add_integer.py
+===============================
+
+Usage:
+    The add_integer function takes two arguments
+        a) a (int or float) -> The first number to add.
+                     -> Must be an integer or float.
+        b) b (int or float) -> The second number to add.
+                     -> Must be an integer or float.
+
+Tests:
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(3, 2)
 5

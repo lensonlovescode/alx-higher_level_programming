@@ -1,3 +1,14 @@
+===============================
+5-text_indentation.py
+==============================
+
+Usage:
+    The text_indentation function takes one argument
+    a) text(str) -> The string to be printed
+                 -> Raises TypeError if its not a string
+                    and prints it to standard output, replacing every ".", ":" or "?" with double "\n"
+
+Test:
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
