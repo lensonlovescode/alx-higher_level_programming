@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 Module defines: Class MyList that inherits from list:
                 Public instance method: def print_sorted(self):
