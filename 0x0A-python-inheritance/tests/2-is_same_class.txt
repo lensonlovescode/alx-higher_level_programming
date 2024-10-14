@@ -1,7 +1,7 @@
 >>> is_same_class = __import__('2-is_same_class').is_same_class
 >>> is_same_class()
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+...
 TypeError: is_same_class() missing 2 required positional arguments: 'obj' and 'a_class'
 >>> is_same_class("Lenson", str)
 True
