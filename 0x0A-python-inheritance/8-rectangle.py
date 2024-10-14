@@ -11,9 +11,9 @@ class Rectangle(BaseGeometry):
     This class contains an initializtion method
     initiating with width and height
     """
+
     def __init__(self, width, height):
         """
-        The instantinuatoir
         Instantiation with width and height
         width and height must be private. No getter or setter
         width and height must be positive integers
