@@ -11,6 +11,8 @@ def pascal_triangle(n):
     representing the Pascal’s triangle of n:
     """
     big_list = []
+    if n <= 0:
+        return (big_list)
     i = 0
     while (i < n):
         big_list.append(list(str(11 ** i)))
