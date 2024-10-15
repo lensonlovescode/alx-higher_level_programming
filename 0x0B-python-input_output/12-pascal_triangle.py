@@ -13,8 +13,6 @@ def pascal_triangle(n):
     big_list = []
     if n <= 0:
         return (big_list)
-    i = 0
-    while (i < n):
+    for i in range(n):
         big_list.append(list(str(11 ** i)))
-        i += 1
     return (big_list)
