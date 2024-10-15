@@ -10,6 +10,5 @@ def read_file(filename=""):
     This function reads a files contents and prints them
     to the standard output
     """
-    with open(filename, 'r', encoding='utf-8') as my_file:
-        read_data = my_file.read()
-    print(read_data)
+    with open(filename, encoding='utf-8') as my_file:
+        print(my_file.read(), end="")
