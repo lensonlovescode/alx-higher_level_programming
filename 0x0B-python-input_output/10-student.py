@@ -33,9 +33,9 @@ class Student:
             only attribute names contained in this list must be retrieved.
         Otherwise, all attributes must be retrieved
         """
-        if attrs == None:
+        if attrs is None:
             return (self.__dict__)
         else:
-            dic = {key: value for key, value in\
-                self.__dict__.items() if key in attrs}
+            dic = {key: value for key, value in
+                   self.__dict__.items() if key in attrs}
             return (dic)
