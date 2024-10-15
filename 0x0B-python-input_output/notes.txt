@@ -1,0 +1,83 @@
+1. Why Python programming is awesome:
+Python is easy to learn, versatile, and has a simple syntax.
+It's widely used in web development, data analysis, automation, and AI/ML.
+Large community support and tons of libraries make it powerful for many applications.
+2. How to open a file:
+Use the built-in open() function.
+Syntax: open("filename", "mode")
+Modes:
+'r': Read mode (default).
+'w': Write mode (creates a new file if it doesn’t exist or overwrites).
+'a': Append mode (adds to the end of the file without overwriting).
+'b': Binary mode (useful for non-text files like images).
+3. How to write text in a file:
+write() or writelines() can be used to write content.
+Example:
+python
+Copy code
+with open("file.txt", "w") as f:
+    f.write("Hello, world!")
+4. How to read the full content of a file:
+read() reads the entire file content as a string.
+Example:
+python
+Copy code
+with open("file.txt", "r") as f:
+    content = f.read()
+5. How to read a file line by line:
+readline() or readlines():
+readline(): Reads one line at a time.
+readlines(): Returns all lines as a list of strings.
+Example:
+python
+Copy code
+with open("file.txt", "r") as f:
+    for line in f:
+        print(line.strip())
+6. How to move the cursor in a file:
+Use seek() to move the file pointer (cursor).
+Example:
+python
+Copy code
+f.seek(0)  # Move to the beginning of the file
+7. How to make sure a file is closed after using it:
+Use the with statement to automatically close a file after its block is executed.
+Example:
+python
+Copy code
+with open("file.txt", "r") as f:
+    content = f.read()
+# File is closed after this block
+8. What is and how to use the with statement:
+The with statement simplifies exception handling and ensures that resources (like files) are properly closed after usage.
+It's often used with file I/O and context management.
+Example:
+python
+Copy code
+with open("file.txt", "w") as f:
+    f.write("Using with statement")
+9. What is JSON:
+JSON (JavaScript Object Notation): A lightweight format used for storing and exchanging data.
+It is text-based and can be easily read by humans and machines.
+Commonly used in APIs and web services.
+10. What is serialization:
+Serialization: The process of converting a Python object (like a dictionary, list) into a JSON string (or binary format).
+In Python, use json.dumps() to serialize.
+11. What is deserialization:
+Deserialization: The process of converting a JSON string into a Python object.
+Use json.loads() in Python to deserialize a JSON string.
+12. How to convert a Python data structure to a JSON string:
+Use json.dumps() to convert Python objects (dictionaries, lists, etc.) into a JSON string.
+Example:
+python
+Copy code
+import json
+data = {"name": "Alice", "age": 25}
+json_str = json.dumps(data)
+13. How to convert a JSON string to a Python data structure:
+Use json.loads() to convert a JSON string into a Python object (like a dictionary).
+Example:
+python
+Copy code
+json_str = '{"name": "Alice", "age": 25}'
+data = json.loads(json_str)
