@@ -24,7 +24,7 @@ class Base:
         if id is none, nb_objects is incremented by 1
         Else,public instance attribute is id
         """
-        if id not is None:
+        if not id is None:
             self.id = id
         else:
             Base.__nb_objects += 1
