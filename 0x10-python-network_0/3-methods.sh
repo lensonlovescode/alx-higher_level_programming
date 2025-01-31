@@ -1,3 +1,3 @@
 #!/bin/bash
-#Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
+#A Bash script that takes in a URL and displays all HTTP methods the server will accept.
 curl -isX OPTIONS "$1" | grep "Allow" | cut -d ":" -f 2 | xargs
