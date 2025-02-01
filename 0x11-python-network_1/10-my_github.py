@@ -17,9 +17,8 @@ if __name__ == "__main__":
     headers = {'Accept': 'application/vnd.github+json',
                'Authorization': Bearer,
                'X-GitHub-Api-Version': '2022-11-28'
-    }
+               }
 
     req = requests.get(url, headers=headers)
     info = req.json()
     print(info.get('id'))
-
