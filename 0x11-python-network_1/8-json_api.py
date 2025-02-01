@@ -5,12 +5,13 @@ http://0.0.0.0:5000/search_user with the letter as a parameter.
 """
 import sys
 import requests
+import requests.exceptions
 
 
 if __name__ == "__main__":
-    if sys.argv[1]:
+    try:
         data = {'q': sys.argv[1]}
-    else:
+    except IndexError:
         data = {'q': ""}
     req = requests.post('http://0.0.0.0:5000/search_user', data)
 
