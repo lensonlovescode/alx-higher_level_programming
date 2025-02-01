@@ -5,7 +5,6 @@ http://0.0.0.0:5000/search_user with the letter as a parameter.
 """
 import sys
 import requests
-import requests.exceptions.JSONDecodeError
 
 
 if __name__ == "__main__":
@@ -21,5 +20,5 @@ if __name__ == "__main__":
             print(f"[{dict_result.get('id')}] {dict_result.get('name')}")
         else:
             print("No result")
-    except requests.exceptions.JSONDecodeError:
+    except ValueError:
         print("Not a valid JSON")
