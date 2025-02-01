@@ -24,7 +24,7 @@ if __name__ == "__main__":
     for item in decoded:
         commit = item.get('commit')
         author = commit.get('author')
-        print(f"{item.get('sha')} {author.get('name')}")
+        print(f"{item.get('sha')}: {author.get('name')}")
         i += 1
         if i == 10:
             break
